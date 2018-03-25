@@ -10,6 +10,7 @@ class Offer implements ArrayAccess {
       'available' => 'boolean',
       'barcode' => 'string',
       'images' => 'array[string]',
+      'categories' => 'array[string]',
       'isbn' => 'string',
       'link' => 'string',
       'prices' => 'array[OfferPrice]',
@@ -21,6 +22,7 @@ class Offer implements ArrayAccess {
       'available' => 'available',
       'barcode' => 'barcode',
       'images' => 'images',
+      'categories' => 'categories',
       'isbn' => 'isbn',
       'link' => 'link',
       'prices' => 'prices',
@@ -41,6 +43,10 @@ class Offer implements ArrayAccess {
   * Imagens dos produtos da oferta
   */
   public $images; /* array[string] */
+  /**
+  * Categorias dos produtos da oferta
+  */
+  public $categories; /* array[string] */
   /**
   * cÃ³digo de barras do livro
   */
@@ -66,6 +72,7 @@ class Offer implements ArrayAccess {
     $this->available = $data["available"];
     $this->barcode = $data["barcode"];
     $this->images = $data["images"];
+    $this->categories = $data["categories"];
     $this->isbn = $data["isbn"];
     $this->link = $data["link"];
     $this->prices = $data["prices"];
